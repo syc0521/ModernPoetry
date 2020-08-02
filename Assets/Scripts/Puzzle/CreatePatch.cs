@@ -13,6 +13,7 @@ namespace Games.Puzzle
         public int ColNumber { get; } = 3;
 
         public int RowNumber { get; } = 3;
+		public int FinishedPuzzle { get; set; } = 0;
 
         void Start()
 		{
@@ -23,7 +24,10 @@ namespace Games.Puzzle
 
 		void Update()
 		{
-
+            if (FinishedPuzzle == RowNumber * ColNumber)
+            {
+				Debug.Log("Win");
+            }
 		}
 
 		private void CreatePatchObj(Sprite[] sprites)

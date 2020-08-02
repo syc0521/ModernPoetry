@@ -11,7 +11,9 @@ namespace Games.Puzzle
 		private float PatchWidth;
 		private float PatchHeight;
 
-		public void InitPatch(float PatchWidth,float PatchHeight,Vector3 targetPosition, Vector3 initPosition)
+        public bool IsComplete { get; set; } = false;
+
+        public void InitPatch(float PatchWidth,float PatchHeight,Vector3 targetPosition, Vector3 initPosition)
 		{
 			this.PatchWidth = PatchWidth;
 			this.PatchHeight = PatchHeight;

@@ -25,7 +25,10 @@ public class MouseDrag : MonoBehaviour
 		}
 		if (Input.GetMouseButton(0))
 		{
-			DragPatch();
+            if (!selectingPatch.IsComplete)
+            {
+				DragPatch();
+			}
 		}
 		if (Input.GetMouseButtonUp(0))
 		{
@@ -80,7 +83,8 @@ public class MouseDrag : MonoBehaviour
 			Mathf.Abs(selectedPatch.transform.position.y - currentPatch.GetTargetPosition().y) < threhold)
         {
 			selectedPatch.transform.position = currentPatch.GetTargetPosition();
-
+			currentPatch.IsComplete = true;
+			createPatchObj.FinishedPuzzle++;
 		}
 	}
 }
