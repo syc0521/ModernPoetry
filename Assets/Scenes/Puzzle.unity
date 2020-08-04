@@ -397,8 +397,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritePatches: []
-  patchXRange: {x: 6.17, y: 14.57}
-  patchYRange: {x: -1.7, y: 7.66}
+  patchXRange: {x: 6.17, y: 12.76}
+  patchYRange: {x: -0.73, y: 7.66}
+  ColNumber: 4
+  RowNumber: 4
 --- !u!4 &2059335303
 Transform:
   m_ObjectHideFlags: 0

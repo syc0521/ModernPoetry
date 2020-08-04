@@ -9,10 +9,10 @@ namespace Games.Puzzle
 		public Sprite[] spritePatches;
         private GameObject[,] patches;
 		public Vector2 patchXRange, patchYRange;
+		private bool isWin = false;
 
-        public int ColNumber { get; } = 3;
-
-        public int RowNumber { get; } = 3;
+		public int ColNumber;
+		public int RowNumber;
 		public int FinishedPuzzle { get; set; } = 0;
 
         void Start()
@@ -26,7 +26,7 @@ namespace Games.Puzzle
 		{
             if (FinishedPuzzle == RowNumber * ColNumber)
             {
-				Debug.Log("Win");
+				isWin = true;
             }
 		}
 
@@ -47,7 +47,6 @@ namespace Games.Puzzle
 					Vector3 targetPosition = new Vector3((col + 0.5f) * patchSize.x, 
 														 (RowNumber - row - 0.5f) * patchSize.y, 0);
 					patches[row, col].AddComponent<Patch>().InitPatch(patchSize.x, patchSize.y, targetPosition, initPosition);
-					//patches[row, col].GetComponent<Transform>().position = patches[row, col].GetComponent<Patch>().GetTargetPosition();
 				}
 			}
 		}
