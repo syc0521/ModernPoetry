@@ -18,7 +18,7 @@ namespace Games.YueOpera
     {
         public float Start { get; set; }
         public float Duration { get; set; }
-        public float Position { get; set; }
+        public int Position { get; set; }
         public Timeline(string start, string duration, string pos)
         {
             try

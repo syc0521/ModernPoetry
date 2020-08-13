@@ -154,7 +154,6 @@ MonoBehaviour:
   LineYPosition:
   - -1.96
   - -4
-  manager: {fileID: 0}
 --- !u!82 &35094195
 AudioSource:
   m_ObjectHideFlags: 0
@@ -275,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525071473}
   - component: {fileID: 525071472}
+  - component: {fileID: 525071474}
   m_Layer: 0
   m_Name: Scanline
   m_TagString: Untagged
@@ -341,12 +341,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525071471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.962, y: -2, z: 0}
+  m_LocalPosition: {x: -8.64, y: -2, z: 0}
   m_LocalScale: {x: 0.93, y: 0.93, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525071474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525071471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967e8d95dd3111488d85a6642d8b5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LineXPosition:
+  - -8.64
+  - 9.14
+  LineYPosition:
+  - -1.96
+  - -4
 --- !u!1 &1005220151
 GameObject:
   m_ObjectHideFlags: 0

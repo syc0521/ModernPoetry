@@ -8,16 +8,18 @@ namespace Games.YueOpera
     public class FileController : MonoBehaviour
     {
         public float[] LineYPosition = new float[2];
-        public GameObject manager;
         private AudioSource source;
         private AudioClip song;
-        void Start()
+        void Awake()
         {
             ReadSong();
             ReadTimeline();
             Debug.Log("Finish");
         }
-
+        private void Start()
+        {
+            source.Play();
+        }
         void Update()
         {
 
