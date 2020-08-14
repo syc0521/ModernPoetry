@@ -14,15 +14,12 @@ namespace Games.YueOpera
         {
             ReadSong();
             ReadTimeline();
-            Debug.Log("Finish");
+            ReadChart();
+
         }
         private void Start()
         {
             source.Play();
-        }
-        void Update()
-        {
-
         }
 
         private void ReadSong()
@@ -39,9 +36,21 @@ namespace Games.YueOpera
             foreach (var line in lines)
             {
                 var temp = line.Split(',');
-                if (temp.Length == 3)
+                if (temp.Length == 4)
                 {
-                    NoteManager.timelines.Add(new Timeline(temp[0], temp[1], temp[2]));
+                    NoteManager.timelines.Add(new Timeline(temp[0], temp[1], temp[2], temp[3]));
+                }
+            }
+        }
+        private void ReadChart()
+        {
+            var chartText = Resources.Load<TextAsset>("chart");
+            var lines = Regex.Split(chartText.text, "\r\n");
+            foreach (var line in lines)
+            {
+                if (!line.Equals(""))
+                {
+                    NoteManager.notes.Add(new Note(line));
                 }
             }
         }

@@ -8,7 +8,7 @@ namespace Games.YueOpera
     {
         public float[] LineXPosition = new float[2];
         public float[] LineYPosition = new float[2];
-        Timeline currentTimeline;
+        private Timeline currentTimeline;
 
         void Update()
         {
