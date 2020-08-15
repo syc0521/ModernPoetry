@@ -9,6 +9,7 @@ namespace Games.YueOpera
         public float Time { get; set; }
         public int Position { get; set; }
         public int TimelineID { get; set; }
+        public bool CanJudge { get; set; } = true;
         public Note(string time)
         {
             int min = Convert.ToInt32(time.Substring(0, 1));

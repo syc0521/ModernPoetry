@@ -53,6 +53,7 @@ namespace Games.YueOpera
                     NoteManager.notes.Add(new Note(line));
                 }
             }
+            NoteManager.notes[0].CanJudge = true;
         }
     }
 

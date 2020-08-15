@@ -44,6 +44,10 @@ namespace Games.YueOpera
                 Destroy(gameObject);
             }
         }
+        private void JudgeNext()
+        {
+            NoteManager.notes[NoteManager.notes.IndexOf(thisNote) + 1].CanJudge = true;
+        }
         private void ShowJudge(int index)
         {
             judgeSprite = Instantiate(Sprites[index]);
@@ -60,7 +64,7 @@ namespace Games.YueOpera
         }
         private int JudgeNote()
         {
-            if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.J))
+            if ((Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.J)) && thisNote.CanJudge)
             {
                 var time = Time.timeSinceLevelLoad;
                 if (time >= thisNote.Time - perfect && time < thisNote.Time + perfect) return 0;
