@@ -34,6 +34,7 @@ namespace Games.Puzzle
 			if (Input.GetMouseButtonUp(0))
 			{
 				MatchPatch();
+				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
 				lastMousePosition = Vector3.zero;
 				if (selectedPatch != null)
 				{
@@ -67,7 +68,8 @@ namespace Games.Puzzle
 			}
 			if (lastMousePosition != Vector3.zero)
 			{
-				selectingPatch.GetComponent<SpriteRenderer>().sortingOrder = 5;
+				selectingPatch.GetComponent<SpriteRenderer>().sortingOrder = 8;
+				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 				Vector3 offset = worldCamera.ScreenToWorldPoint(Input.mousePosition) - lastMousePosition;
 				selectedPatch.position += offset;
 			}
@@ -84,6 +86,7 @@ namespace Games.Puzzle
 				Mathf.Abs(selectedPatch.transform.position.y - currentPatch.GetTargetPosition().y) < threhold)
 			{
 				selectedPatch.transform.position = currentPatch.GetTargetPosition();
+				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 				currentPatch.IsComplete = true;
 				createPatchObj.FinishedPuzzle++;
 			}

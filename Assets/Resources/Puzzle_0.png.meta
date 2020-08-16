@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: 7a4ed7f547f7523459bd45cf20c510de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7824966321426502507
+    second: Puzzle_1_0
+  - first:
+      213: 1322611394118336676
+    second: Puzzle_1_1
+  - first:
+      213: 80407854606568208
+    second: Puzzle_1_2
+  - first:
+      213: 6416328746050272200
+    second: Puzzle_1_3
+  - first:
+      213: 8937782688861424293
+    second: Puzzle_1_4
+  - first:
+      213: -8034553041090846731
+    second: Puzzle_1_5
+  - first:
+      213: -1337000605580979056
+    second: Puzzle_1_6
+  - first:
+      213: -4040691089588220748
+    second: Puzzle_1_7
+  - first:
+      213: -169051514549952751
+    second: Puzzle_1_8
+  - first:
+      213: -5458605298857751636
+    second: Puzzle_1_9
+  - first:
+      213: -8361640565284731351
+    second: Puzzle_1_10
+  - first:
+      213: -8290725349158452016
+    second: Puzzle_1_11
+  - first:
+      213: 7657308707514223978
+    second: Puzzle_1_12
+  - first:
+      213: 3146238326546476545
+    second: Puzzle_1_13
+  - first:
+      213: -2035374777864786415
+    second: Puzzle_1_14
+  - first:
+      213: 4274404278208198017
+    second: Puzzle_1_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Puzzle_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b639500396dd79c60800000000000000
+      internalID: 7824966321426502507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 648
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0ce423e0cda5210800000000000000
+      internalID: 1322611394118336676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 648
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bc9fa848aad1100800000000000000
+      internalID: 80407854606568208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_3
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 648
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb3476dff06b0950800000000000000
+      internalID: 6416328746050272200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa88394002690c70800000000000000
+      internalID: 8937782688861424293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_5
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 432
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffdeb8f3988f7090800000000000000
+      internalID: -8034553041090846731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_6
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 432
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0941ddf6805027de0800000000000000
+      internalID: -1337000605580979056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_7
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 432
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc020eccd49ce7c0800000000000000
+      internalID: -4040691089588220748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f128e0b8867adf0800000000000000
+      internalID: -169051514549952751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 216
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabc480d6632f34b0800000000000000
+      internalID: -5458605298857751636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_10
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 216
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92605be253c75fb80800000000000000
+      internalID: -8361640565284731351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_11
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 216
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d48519983d61fc80800000000000000
+      internalID: -8290725349158452016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d04e603b9344a60800000000000000
+      internalID: 7657308707514223978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_13
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ea588a61fa9ab20800000000000000
+      internalID: 3146238326546476545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_14
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e64946c65e0c3e0800000000000000
+      internalID: -2035374777864786415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puzzle_1_15
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 183.5
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18572055b0cb15b30800000000000000
+      internalID: 4274404278208198017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
