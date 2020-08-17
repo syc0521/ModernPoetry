@@ -33,8 +33,10 @@ namespace Games.Puzzle
 			}
 			if (Input.GetMouseButtonUp(0))
 			{
-				MatchPatch();
-				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+                if (!MatchPatch())
+                {
+					selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
+				}
 				lastMousePosition = Vector3.zero;
 				if (selectedPatch != null)
 				{
@@ -75,11 +77,11 @@ namespace Games.Puzzle
 			}
 			lastMousePosition = worldCamera.ScreenToWorldPoint(Input.mousePosition);
 		}
-		private void MatchPatch()
+		private bool MatchPatch()
 		{
 			if (selectedPatch == null)
 			{
-				return;
+				return false;
 			}
 			Patch currentPatch = selectedPatch.GetComponent<Patch>();
 			if (Mathf.Abs(selectedPatch.transform.position.x - currentPatch.GetTargetPosition().x) < threhold &&
@@ -89,7 +91,9 @@ namespace Games.Puzzle
 				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 				currentPatch.IsComplete = true;
 				createPatchObj.FinishedPuzzle++;
+				return true;
 			}
+			return false;
 		}
 	}
 
