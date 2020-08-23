@@ -58,8 +58,9 @@ namespace Games.Puzzle
 					float x = Random.Range(patchXRange.x, patchXRange.y);
 					float y = Random.Range(patchYRange.x, patchYRange.y);
 					patches[row, col].transform.position = new Vector3(x, y, 0);
-					patches[row, col].transform.localScale = new Vector3(0.717f, 0.717f);
-					Vector2 patchSize = patches[row, col].GetComponent<SpriteRenderer>().sprite.bounds.size * 0.717f;
+					patches[row, col].transform.localScale = new Vector3(0.875f, 0.841f);
+					Vector2 size = patches[row, col].GetComponent<SpriteRenderer>().sprite.bounds.size;
+					Vector2 patchSize = new Vector2(size.x * 0.875f, size.y * 0.841f);
 					Vector3 initPosition = patches[row, col].GetComponent<Transform>().position;
 					Vector3 targetPosition = new Vector3((col + 0.5f) * patchSize.x, 
 														 (RowNumber - row - 0.5f) * patchSize.y, 0);

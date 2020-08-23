@@ -12,7 +12,7 @@ namespace Games.Puzzle
 		private Patch selectingPatch;
 		private Transform selectedPatch;
 		private Vector3 lastMousePosition = Vector3.zero;
-		public float threhold = 0.2f;
+		public float threhold = 0.35f;
 
 		void Update()
 		{
