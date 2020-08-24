@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static float greenPosition;
+    private float redPosition;
     public GameObject green;
     public float YPosition;
     public GameObject triangle;
@@ -15,32 +16,39 @@ public class GameManager : MonoBehaviour
     private bool isJudged = false;
     public Vector2 maxPosition;
     public Vector2 maxRedPosition;
+    public Sprite[] resultSprites = new Sprite[4];
+    public SpriteRenderer result;
+    private System.Random random;
     void Start()
     {
+        long tick = DateTime.Now.Ticks;
+        random = new System.Random((int)(tick & 0x12345678L) | ((int)tick >> 32));
         var temp = Instantiate(green);
-        greenPosition = UnityEngine.Random.Range(-maxPosition.x, maxPosition.y);
-        Debug.Log(greenPosition);
-        float left = Mathf.InverseLerp(-maxPosition.x, maxPosition.y, greenPosition - 1);
-        float right = Mathf.InverseLerp(-maxPosition.x, maxPosition.y, greenPosition + 1);
-        Debug.Log(left);
-        Debug.Log(right);
-        temp.transform.position = new Vector3(greenPosition, YPosition);
+        redPosition = UnityEngine.Random.Range(maxRedPosition.x, maxRedPosition.y);
+        //Debug.Log(redPosition);
+        //float left = Mathf.InverseLerp(maxPosition.x, maxPosition.y, redPosition - 0.8f);
+        //float right = Mathf.InverseLerp(maxPosition.x, maxPosition.y, redPosition + 0.8f);
+        //Debug.Log(left);
+        //Debug.Log(right);
+        temp.transform.position = new Vector3(redPosition, YPosition);
     }
 
     void Update()
     {
         ShowTime();
         LimitPosition();
-        Press();
         if (time == 0 && isJudged == false)
         {
             JudgeWin();
             isJudged = true;
         }
-        if (time != 0)
+        Press();
+        if (time == 0)
         {
-            float x = triangle.transform.position.x - 0.008f;
-            triangle.transform.position = new Vector3(x, triangle.transform.position.y);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene("Pottery");
+            }
         }
     }
 
@@ -57,29 +65,45 @@ public class GameManager : MonoBehaviour
 
     private void JudgeWin()
     {
-        float left = Mathf.InverseLerp(-5, 5, greenPosition - 1);
-        float right = Mathf.InverseLerp(-5, 5, greenPosition + 1);
-        float middle = Mathf.InverseLerp(-maxRedPosition.x, maxRedPosition.y, triangle.transform.position.x);
+        float left = redPosition - 0.78f;
+        float right = redPosition + 0.78f;
+        float middle = triangle.transform.position.x;
         if (middle >= left && middle <= right)
         {
             Debug.Log("win");
+            result.sprite = resultSprites[random.Next(1, 3)];
         }
         else
         {
             Debug.Log("lose");
+            result.sprite = resultSprites[0];
         }
     }
     private void Press()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (time != 0)
         {
-            StartCoroutine(MoveTriangle());
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(MoveTriangle());
+            }
+#if UNITY_EDITOR
+            float x = triangle.transform.position.x - 0.008f;
+#else
+            float x = triangle.transform.position.x - 0.056f;
+#endif
+            triangle.transform.position = new Vector3(x, triangle.transform.position.y);
         }
     }
     private IEnumerator MoveTriangle()
     {
-        float speed = UnityEngine.Random.Range(0.15f, 0.34f);
+#if UNITY_EDITOR
+        float speed = 0.15f + 0.2f * (float)random.NextDouble();
         float acceleration = speed / 25.0f;
+#else
+        float speed = 0.21f + 0.25f * (float)random.NextDouble();
+        float acceleration = speed / 12.0f;
+#endif
         float x = triangle.transform.position.x;
         while (speed > 0)
         {
@@ -92,14 +116,13 @@ public class GameManager : MonoBehaviour
     }
     private void LimitPosition()
     {
-        
-        if (triangle.transform.position.x <= -maxRedPosition.x)
+        if (triangle.transform.position.x <= maxPosition.x)
         {
-            triangle.transform.position = new Vector3(-maxRedPosition.x, triangle.transform.position.y);
+            triangle.transform.position = new Vector3(maxPosition.x, triangle.transform.position.y);
         }
-        if (triangle.transform.position.x >= maxRedPosition.y)
+        if (triangle.transform.position.x >= maxPosition.y)
         {
-            triangle.transform.position = new Vector3(maxRedPosition.y, triangle.transform.position.y);
+            triangle.transform.position = new Vector3(maxPosition.y, triangle.transform.position.y);
         }
     }
 }

@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Puzzle
+  m_Name: Pottery_Pack
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -42,22 +42,31 @@ SpriteAtlas:
       enableTightPacking: 1
     variantMultiplier: 1
     packables:
-    - {fileID: 21300000, guid: 5710ac80118f2224ca69dddb52f21cc1, type: 3}
-    - {fileID: 21300000, guid: f65e65a4d6873fe4ebd14e835aa27d0b, type: 3}
-    - {fileID: 8536964925780480506, guid: 0428f97205a445f4ba07abeafb89698d, type: 3}
-    - {fileID: 9047482527535229834, guid: 0428f97205a445f4ba07abeafb89698d, type: 3}
-    totalSpriteSurfaceArea: 1557061
+    - {fileID: 21300000, guid: bf7718329c9525342bd29d478d70aad7, type: 3}
+    - {fileID: 21300000, guid: e0aaa84e12d6d004a87cdb2337d4bae4, type: 3}
+    - {fileID: 21300000, guid: c5d3e832fe73b3642b0571006820dcbe, type: 3}
+    - {fileID: 21300000, guid: 97b5f75ce1f90f24cba5efbf2e9448c7, type: 3}
+    - {fileID: 21300000, guid: 14a6da8842c8ad041991cbc2ad2a1dc2, type: 3}
+    - {fileID: 21300000, guid: 60335893090e33c4bbf8201524157e50, type: 3}
+    - {fileID: 21300000, guid: afc1144daf90d674cb1ae2cf6f8ec49c, type: 3}
+    totalSpriteSurfaceArea: 1976904
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 5710ac80118f2224ca69dddb52f21cc1, type: 3}
-  - {fileID: 9047482527535229834, guid: 0428f97205a445f4ba07abeafb89698d, type: 3}
-  - {fileID: 8536964925780480506, guid: 0428f97205a445f4ba07abeafb89698d, type: 3}
-  - {fileID: 21300000, guid: f65e65a4d6873fe4ebd14e835aa27d0b, type: 3}
+  - {fileID: 21300000, guid: bf7718329c9525342bd29d478d70aad7, type: 3}
+  - {fileID: 21300000, guid: c5d3e832fe73b3642b0571006820dcbe, type: 3}
+  - {fileID: 21300000, guid: 60335893090e33c4bbf8201524157e50, type: 3}
+  - {fileID: 21300000, guid: 14a6da8842c8ad041991cbc2ad2a1dc2, type: 3}
+  - {fileID: 21300000, guid: 97b5f75ce1f90f24cba5efbf2e9448c7, type: 3}
+  - {fileID: 21300000, guid: afc1144daf90d674cb1ae2cf6f8ec49c, type: 3}
+  - {fileID: 21300000, guid: e0aaa84e12d6d004a87cdb2337d4bae4, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Puzzle_0
-  - Puzzle_Element_1
-  - Puzzle_Element_0
-  - Puzzle_1
-  m_Tag: Puzzle
+  - "\u4E09\u89D2"
+  - "\u6210\u529F2"
+  - "\u7EA2\u6761"
+  - "\u5931\u8D25"
+  - "\u6210\u529F3"
+  - "\u9EC4\u6761"
+  - "\u6210\u529F1"
+  m_Tag: Pottery_Pack
   m_IsVariant: 0
