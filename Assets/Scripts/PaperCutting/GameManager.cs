@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Games.PaperCutting
 {
@@ -26,6 +27,13 @@ namespace Games.PaperCutting
         public void DestroyPaper()
         {
             Destroy(currentPaper);
+        }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main");
+            }
         }
     }
 }

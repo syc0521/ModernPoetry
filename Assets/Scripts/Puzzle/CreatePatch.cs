@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace Games.Puzzle
 {
@@ -28,7 +29,11 @@ namespace Games.Puzzle
 
 		void Update()
 		{
-            if (FinishedPuzzle == RowNumber * ColNumber)
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				SceneManager.LoadScene("Main");
+			}
+			if (FinishedPuzzle == RowNumber * ColNumber)
             {
 				isWin = true;
             }

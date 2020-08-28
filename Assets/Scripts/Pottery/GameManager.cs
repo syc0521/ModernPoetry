@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main");
+        }
         ShowTime();
         LimitPosition();
         if (time == 0 && isJudged == false)

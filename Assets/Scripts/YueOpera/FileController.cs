@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Games.YueOpera
 {
@@ -15,13 +16,18 @@ namespace Games.YueOpera
             ReadSong();
             ReadTimeline();
             ReadChart();
-
         }
         private void Start()
         {
             source.Play();
         }
-
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main");
+            }
+        }
         private void ReadSong()
         {
             song = Resources.Load<AudioClip>("track");
