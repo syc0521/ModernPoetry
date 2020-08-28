@@ -61,12 +61,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: afc1144daf90d674cb1ae2cf6f8ec49c, type: 3}
   - {fileID: 21300000, guid: e0aaa84e12d6d004a87cdb2337d4bae4, type: 3}
   m_PackedSpriteNamesToIndex:
-  - "\u4E09\u89D2"
-  - "\u6210\u529F2"
+  - Triangle
+  - Success_2
   - "\u7EA2\u6761"
-  - "\u5931\u8D25"
-  - "\u6210\u529F3"
-  - "\u9EC4\u6761"
-  - "\u6210\u529F1"
+  - Fail
+  - Success_3
+  - Gauge
+  - Success_1
   m_Tag: Pottery_Pack
   m_IsVariant: 0
