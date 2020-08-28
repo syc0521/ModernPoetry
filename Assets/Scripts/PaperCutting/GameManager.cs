@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Games.PaperCutting
 {
-    public GameObject[] papers = new GameObject[3];
-    public GameObject[] paperButton = new GameObject[3];
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        
-    }
+        public GameObject[] papers = new GameObject[3];
+        public GameObject[] paperButton = new GameObject[3];
+        public Vector2 position;
+        private GameObject currentPaper;
+        public static GameManager _instance;
+        public static int count = 0;
+        private readonly int[] pieces = { 27, 26, 38 };
+        void Start()
+        {
+            _instance = this;
+            CreatePaper(0);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void CreatePaper(int index)
+        {
+            currentPaper = Instantiate(papers[index]);
+        }
+        public void DestroyPaper()
+        {
+            Destroy(currentPaper);
+        }
     }
 }
