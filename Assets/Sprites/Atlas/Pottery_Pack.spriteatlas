@@ -63,7 +63,7 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - Triangle
   - Success_2
-  - "\u7EA2\u6761"
+  - RedGauge
   - Fail
   - Success_3
   - Gauge

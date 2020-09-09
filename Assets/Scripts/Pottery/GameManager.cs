@@ -35,23 +35,27 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
+        if (Button.isStart)
         {
-            SceneManager.LoadScene("Main");
-        }
-        ShowTime();
-        LimitPosition();
-        if (time == 0 && isJudged == false)
-        {
-            JudgeWin();
-            isJudged = true;
-        }
-        Press();
-        if (time == 0)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
+            ShowTime();
+            LimitPosition();
+            if (time == 0 && isJudged == false)
             {
-                SceneManager.LoadScene("Pottery");
+                JudgeWin();
+                isJudged = true;
+            }
+            Press();
+            if (time == 0)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    Button.isStart = false;
+                    SceneManager.LoadScene("Pottery");
+                }
             }
         }
     }
