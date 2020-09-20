@@ -25,7 +25,7 @@ namespace Games.YueOpera
                     GameObject obj = Instantiate(tap);
                     obj.GetComponent<Tap>().thisNote = note;
                     float delta = Mathf.InverseLerp(current.Start, current.Start + current.Duration, note.Time);
-                    float x = Mathf.Lerp(TapXPosition[0], TapXPosition[1], delta);
+                    float x = Mathf.Lerp(TapXPosition[0] + 0.1f, TapXPosition[1] + 0.3f, delta);
                     obj.transform.position = new Vector3(x, TapYPosition[current.Position]);
                     obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
                 }

@@ -9,6 +9,7 @@ namespace Games.YueOpera
         public Note thisNote;
         public GameObject[] Sprites;
         private GameObject judgeSprite;
+        public GameObject noteEffect;
         private readonly float judgeDelta = -0.74f;
         private readonly float perfect = 0.1f;
         private readonly float great = 0.25f;
@@ -21,13 +22,17 @@ namespace Games.YueOpera
             {
                 case 0:
                     Debug.Log(thisNote + "perfect");
+                    JudgeNext();
                     NoteManager.perfect++;
                     Destroy(gameObject);
+                    Instantiate(noteEffect, gameObject.transform.position, Quaternion.identity);
                     break;
                 case 1:
                     Debug.Log(thisNote + "great");
+                    JudgeNext();
                     NoteManager.great++;
                     Destroy(gameObject);
+                    Instantiate(noteEffect, gameObject.transform.position, Quaternion.identity);
                     break;
                 case 2:
                     Debug.Log(thisNote + "miss");

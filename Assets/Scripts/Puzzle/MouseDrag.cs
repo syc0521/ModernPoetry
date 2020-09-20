@@ -91,6 +91,7 @@ namespace Games.Puzzle
 				selectingPatch.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 				currentPatch.IsComplete = true;
 				createPatchObj.FinishedPuzzle++;
+				selectingPatch.GetComponent<AudioSource>().Play();
 				return true;
 			}
 			return false;

@@ -14,7 +14,7 @@ namespace Games.YueOpera
         {
             int min = Convert.ToInt32(time.Substring(0, 1));
             int sec = Convert.ToInt32(time.Substring(2, 2));
-            int mil = Convert.ToInt32(time.Substring(5, 3));
+            int mil = Convert.ToInt32(time.Substring(5, 3)) - 120;
             Time = min * 60 + sec + mil / 1000.0f;
             for (int i = 0; i < NoteManager.timelines.Count; i++)
             {

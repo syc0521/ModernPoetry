@@ -99,3 +99,5 @@ MonoBehaviour:
   - {fileID: 1889031453630360343, guid: 816b16353349da64c840f8ec08249702, type: 3}
   - {fileID: 3413862403127847046, guid: 2c9232978fe390a49bc6f473ba184c4c, type: 3}
   - {fileID: 4117841206839187578, guid: 922b50bc296a14849b31ebaa00670684, type: 3}
+  noteEffect: {fileID: 6123686033787933543, guid: ee3445eb01dfbe74483bd6fc92109fd3,
+    type: 3}

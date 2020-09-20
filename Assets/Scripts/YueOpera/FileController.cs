@@ -13,13 +13,10 @@ namespace Games.YueOpera
         private AudioClip song;
         void Awake()
         {
+            Time.timeScale = 0;
             ReadSong();
             ReadTimeline();
             ReadChart();
-        }
-        private void Start()
-        {
-            source.Play();
         }
         private void Update()
         {
@@ -33,6 +30,7 @@ namespace Games.YueOpera
             song = Resources.Load<AudioClip>("track");
             gameObject.AddComponent<AudioSource>();
             source = gameObject.GetComponent<AudioSource>();
+            source.playOnAwake = false;
             source.clip = song;
         }
         private void ReadTimeline()

@@ -10,6 +10,7 @@ namespace Games.Puzzle
 	{
 		public Sprite[] spritePatches;
         private GameObject[,] patches;
+		public AudioClip puzzleEffect;
 		public Sprite[] items;
 		public SpriteRenderer picture;
 		public Vector2 patchXRange, patchYRange;
@@ -57,6 +58,9 @@ namespace Games.Puzzle
 				for (int col = 0; col < ColNumber; col++)
 				{
 					patches[row, col] = new GameObject("patch" + row + col);
+					var patchAudio = patches[row, col].AddComponent<AudioSource>();
+					patchAudio.clip = puzzleEffect;
+					patchAudio.playOnAwake = false;
 					patches[row, col].AddComponent<SpriteRenderer>().sprite = spritePatches[row * ColNumber + col];
 					patches[row, col].GetComponent<SpriteRenderer>().sortingOrder = 7;
 					patches[row, col].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);

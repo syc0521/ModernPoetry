@@ -19,17 +19,14 @@ public class GameManager : MonoBehaviour
     public Sprite[] resultSprites = new Sprite[4];
     public SpriteRenderer result;
     private System.Random random;
+    public AudioClip perfectClip;
+    public AudioClip badClip;
     void Start()
     {
         long tick = DateTime.Now.Ticks;
         random = new System.Random((int)(tick & 0x12345678L) | ((int)tick >> 32));
         var temp = Instantiate(green);
         redPosition = UnityEngine.Random.Range(maxRedPosition.x, maxRedPosition.y);
-        //Debug.Log(redPosition);
-        //float left = Mathf.InverseLerp(maxPosition.x, maxPosition.y, redPosition - 0.8f);
-        //float right = Mathf.InverseLerp(maxPosition.x, maxPosition.y, redPosition + 0.8f);
-        //Debug.Log(left);
-        //Debug.Log(right);
         temp.transform.position = new Vector3(redPosition, YPosition);
     }
 
@@ -76,15 +73,20 @@ public class GameManager : MonoBehaviour
         float left = redPosition - 0.78f;
         float right = redPosition + 0.78f;
         float middle = triangle.transform.position.x;
+        var audioMgr = gameObject.GetComponent<AudioSource>();
         if (middle >= left && middle <= right)
         {
             Debug.Log("win");
             result.sprite = resultSprites[random.Next(1, 3)];
+            audioMgr.clip = perfectClip;
+            audioMgr.Play();
         }
         else
         {
             Debug.Log("lose");
             result.sprite = resultSprites[0];
+            audioMgr.clip = badClip;
+            audioMgr.Play();
         }
     }
     private void Press()
