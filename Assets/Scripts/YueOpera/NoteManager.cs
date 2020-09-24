@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Games.YueOpera
 {
@@ -15,8 +16,11 @@ namespace Games.YueOpera
         public static int perfect;
         public static int great;
         public static int miss;
+        public Text[] result;//p g m
+        public static NoteManager _instance;
         private void Start()
         {
+            _instance = this;
             foreach (var note in notes)
             {
                 Timeline current = timelines[note.TimelineID];
@@ -30,6 +34,12 @@ namespace Games.YueOpera
                     obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
                 }
             }
+        }
+        public void FinishText()
+        {
+            result[0].text = perfect.ToString();
+            result[1].text = great.ToString();
+            result[2].text = miss.ToString();
         }
     }
 }

@@ -34,10 +34,6 @@ namespace Games.YueOpera
                     Destroy(gameObject);
                     Instantiate(noteEffect, gameObject.transform.position, Quaternion.identity);
                     break;
-                case 2:
-                    Debug.Log(thisNote + "miss");
-                    NoteManager.miss++;
-                    break;
             }
             if (judgeType != -2)
             {
@@ -46,6 +42,8 @@ namespace Games.YueOpera
             if (Time.timeSinceLevelLoad >= thisNote.Time + 0.25f || judgeType == -1)
             {
                 ShowJudge(2);
+                Debug.Log(thisNote + "miss");
+                NoteManager.miss++;
                 Destroy(gameObject);
             }
         }

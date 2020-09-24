@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseBtn : MonoBehaviour
@@ -8,6 +9,7 @@ public class PauseBtn : MonoBehaviour
     public GameObject manager;
     public Sprite pause;
     public Sprite resume;
+    public GameObject finish;
     public void Pause()
     {
         Time.timeScale = 0;
@@ -26,5 +28,11 @@ public class PauseBtn : MonoBehaviour
     {
         if (Time.timeScale == 0) Resume();
         else Pause();
+    }
+
+    public void Retry()
+    {
+        finish.SetActive(false);
+        SceneManager.LoadScene("YueOpera");
     }
 }
