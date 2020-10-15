@@ -18,13 +18,13 @@ namespace Games.PaperCutting
         {
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             cuttingAudio.Play();
-            GameManager.count++;
             Debug.Log(GameManager.count);
             Invoke(nameof(DestroyObj), 0.4f);
         }
 
         private void DestroyObj()
         {
+            GameManager.count++;
             Destroy(gameObject);
         }
     }

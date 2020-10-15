@@ -19,10 +19,17 @@ namespace Games.Puzzle
 		public int ColNumber;
 		public int RowNumber;
 		public static CreatePatch _instance;
-		public int FinishedPuzzle { get; set; } = 0;
+		public GameObject alpha;
+		public GameObject victory;
+		public GameObject continueButton;
+		public int FinishedPuzzle { get; set; }
 
         void Start()
 		{
+			FinishedPuzzle = 0;
+			alpha.SetActive(false);
+			victory.SetActive(false);
+			continueButton.SetActive(false);
 			_instance = this;
 			patches = new GameObject[ColNumber, RowNumber];
 			CreatePatchObj();
@@ -37,6 +44,12 @@ namespace Games.Puzzle
 			if (FinishedPuzzle == RowNumber * ColNumber)
             {
 				isWin = true;
+            }
+            if (isWin)
+            {
+				alpha.SetActive(true);
+				victory.SetActive(true);
+				continueButton.SetActive(true);
             }
 		}
 		public void DeletePatch()
